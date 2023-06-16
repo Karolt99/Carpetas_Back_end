@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles-agregar.css">
+<title>CRUD</title>
+</head>
+
+<body>
+<h1>Actualizar usuario</h1>
+
+<!-- Formulario para actualizar los registros -->
+
+<form action="/actualizar" method="POST">
+<% registros.forEach((registro) => { %>
+<!-- Campos para ingresar los nuevos valores -->
+<label for="name">Nombre:</label>
+<input type="text" name="name" id="name" value="<%=registro.nombre%>" required><br>
+<label for="lastname">Apellido:</label>
+<input type="text" name="lastname" id="lastname" value="<%=registro.apellido%>" required><br>
+<label for="age">Edad:</label>
+<input type="number" name="age" id="age" value="<%=registro.edad%>" required><br>
+<!-- Agregar más campos para otros valores si los hay -->
+
+<!-- Ocultar el campo ID para enviarlo junto con los nuevos valores -->
+<input type="hidden" name="id" id="id" value="<%=registro.cedula%>">
+<% }); %>
+<!-- Botón para enviar el formulario de actualización -->
+<input type="submit" value="Actualizar"></button>
+</form>
+</body>
+</html>

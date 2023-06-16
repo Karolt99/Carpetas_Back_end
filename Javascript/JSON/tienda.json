@@ -1,0 +1,37 @@
+[
+    {
+    "nombreProducto": "Leche",
+    "descripcion": "Leche entera",
+    "precio": 3000
+    },
+    {
+    "nombreProducto": "Arroz",
+    "descripcion": "Arroz Diana",
+    "precio": 1500
+    },
+    {
+    "nombreProducto": "Aceite",
+    "descripcion": "Aceite de oliva",
+    "precio": 18000
+    },
+    {
+    "nombreProducto": "Huevo",
+    "descripcion": "Docena de huevos",
+    "precio": 15000
+    },
+    {
+    "nombreProducto": "Azucar",
+    "descripcion": "Azucar morena",
+    "precio": 1800
+    },
+    {
+    "nombreProducto": "Papa",
+    "descripcion": "Libra de papa",
+    "precio": 3000
+    },
+    {
+    "nombreProducto":"Pan",
+    "descripcion":"bolsa de panes",
+    "precio": 2500
+    }
+    ]

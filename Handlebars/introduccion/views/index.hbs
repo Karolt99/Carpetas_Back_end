@@ -1,0 +1,14 @@
+<h1>{{titulo}}</h1>
+<h2>Bienvenida {{nombre}} {{apellido}}</h2>
+{{#if error}}
+<p style="color: red;">{{mensaje}}</p>
+{{else}}
+<p>Por favor ingrese sus credenciales</p>
+{{/if}}
+<form action="/login" method="post">
+<label for="user">Usuario: </label>
+<input type="text" name="user" id="user" required><br>
+<label for="pass">Contraseña:</label>
+<input type="password" name="pass" id="pass" required><br>
+<input type="submit" value="Enviar">
+</form>

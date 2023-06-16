@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Nombre: </label>
+        <!-- Input de tipo texto -->
+        <input type="text" id="name" placeholder="Ingrese su nombre" autocomplete="off">
+        <br>
+        <label for="pass">Contraseña:</label>
+        <!-- Input de tipo password me recibe una contraseña -->
+        <input type="password" id="pass" placeholder="Ingrese su contraseña">
+        <br>
+        <label for="mail">Correo:</label> 
+        <!-- input de tipo email me recibe un correo electronico -->
+        <input type="email" id="mail" placeholder="Ingrese su correo" required>
+        </fieldset>
+        
+        <input type="email" id="mail" placeholder="Ingrese su correo" required onpaste="return false">
+        <!-- Inputs type -->
+        <br>
+        <!-- Checkbox permite tener una casilla de verificación -->
+        <input type="checkbox" required>
+        <label>Acepto terminos y condiciones</label>
+        <br>
+        <!--  -->
+        <h2>Seleccione su lenguaje favorito</h2>
+        <!-- Radio permite seleccionar una opcion -->
+        <input type="radio">
+        <label>PHP</label>
+        <br>
+        <label>Ingrese su fecha de nacimiento:</label>
+        <input type="date">
+        <br>
+        <label>Ingrese su corlor favorito</label>
+        <input type="color">
+        <br>
+        <input type="button" value="Boton 1">
+        <br>
+        <label>Edad</label>
+        <input type="number" placeholder="Ingrese su edad">
+        <br>
+        <label>Buscar</label>
+        <input type="search" placeholder="Busqueda">
+        <br>
+        <input type="file">
+        <br>
+        <!-- El campo que envia el formulario -->
+        <input type="submit">
+        <br>
+        <select>
+            <option>PHP</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            </select>
+            <br>
+            <h2>Seleccione su lenguaje favorito</h2>
+            <!-- Radio permite seleccionar una opcion -->
+            <input type="radio" name="lenguaje" id="lenguaje-php" value="php">
+            <label>PHP</label>
+            <input type="radio" name="lenguaje" id="lenguaje-js" value="js">
+            <label>JavaScript</label>
+            <input type="radio" name="lenguaje" id="lenguaje-py" value="py">
+            <label>Python</label>    
+    </form>
+</body>
+</html>

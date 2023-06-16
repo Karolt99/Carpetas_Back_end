@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <h1>Curso JavaScript</h1>
+    <h2>Sintaxis básica</h2>
+    <ul>
+      <li>Variables</li>
+      <li>Las constantes</li>
+      <li>Operadores</li>
+    </ul>
+    <h2>Estructuras de Control</h2>
+    <ul>
+      <li>Condicionales</li>
+      <li>Interativas condicionales (ciclos)</li>
+    </ul>
+    <script>
+      // Variable global
+      let edad = 45;
+      // Variable local
+      {
+        var saludo = "Hola!!";
+        console.log(saludo);
+        let nombre = "Luz Polo";
+        console.log(nombre, edad);
+      }
+      let nombre = "Liliana Herrera";
+      console.log("La variable saludo despues del bloque es:");
+      console.log(saludo);
+      console.log("La variable nombre despues del bloque es:");
+      console.log(nombre);
+
+      // Tipos de datos
+      // Números
+      let num1 = 1564;
+      let num2 = 25;
+
+      // Caracteres y cadenas de texto
+      let cadena = "Esta es mi primera cadena";
+      let caracter = "a";
+
+      // Logico
+      let verdadero = true;
+      let falso = false;
+
+      // Constantes
+      const PI = 3.1416;
+      console.log(PI);
+
+      // Operadores
+      // Suma
+      let suma = num1 + num2;
+      console.log("El valor de la suma es ", suma);
+      // Multiplicacion
+      let multi = num1 * num2;
+      console.log("El valor de la multiplacion es ", multi);
+      // División
+      let divi = num1 / num2;
+      console.log("El valor de la division es ", divi);
+      // Modulo
+      let modulo = num2 % 2;
+      console.log("El resto del numero es ", modulo);
+      // Resta
+      let rest = num1 - num2;
+      console.log("El resultado de la resta es ", rest);
+      // Operadores de incremento
+      let i = 0;
+      // Al valor de i incrementele 1 unidad
+      i++;
+      console.log(i);
+      let j = 54;
+      j--;
+      console.log(j);
+      // Operados logicos
+      // Verdadero AND Falso = Falso
+      // AND &&: Solo devuelve verdadero cuando los dos son verdadero
+
+      let resultadoBooleano;
+
+      resultadoBooleano = verdadero && verdadero;
+      console.log(resultadoBooleano);
+
+      // OR ||: Solo devuelve falso cuando las dos son falsas
+
+      resultadoBooleano = falso || falso;
+      console.log(resultadoBooleano);
+
+      // Negación !: Invierte el valor del booleano
+
+      resultadoBooleano = !falso;
+      console.log(resultadoBooleano);
+
+      // Operadores de comparacion
+      // Mayor >
+      // num1=1564
+      // num2=25
+      resultadoBooleano = num1 > num2;
+      console.log(resultadoBooleano);
+      // Menor <
+      resultadoBooleano = num1 < num2;
+      console.log(resultadoBooleano);
+      num1 = 25;
+      // Mayor o igual que
+      resultadoBooleano = num1 >= num2;
+      console.log(resultadoBooleano);
+      // Menor o igual que
+      resultadoBooleano = num1 <= num2;
+      console.log(resultadoBooleano);
+      // Comparacion
+      // Se puede comparar SOLO el valor con ==
+      // Se puede comparar el valor Y el tipo de dato ===
+      num2 = 62;
+      resultadoBooleano = num1 === num2;
+      console.log(resultadoBooleano);
+      // Diferente !=
+      resultadoBooleano = num1 != num2;
+      console.log(resultadoBooleano);
+      // Estructuras de control
+      // Condicionales
+      console.log("-----------Estructruas de control--------------");
+      // Si - Entonces (IF - ELSE)
+      num1 = 10;
+      // 10>=50 FALSE
+      if (num1 >= 50) {
+        console.log("El numero 1 es mayor o igual que 50");
+      } else {
+        console.log("El número 1 NO es mayor o igual que 50");
+      }
+      // Operador ternario sirve para instrucciones de comparacion simples
+      let operadorTernario =
+        num1 >= 50
+          ? "El numero 1 es mayor o igual que 50"
+          : "El número 1 NO es mayor o igual que 50";
+      console.log(operadorTernario);
+      let op;
+      switch (op) {
+        case 1:
+          console.log("el valor de op es 1");
+          break;
+        case 2:
+          console.log("el valor de op es 2");
+          break;
+        case 5:
+          console.log("el valor de op es 5");
+          break;
+        default:
+          console.log("el valor es distinto de 1y2");
+          break;
+      }
+      // Estructuras de control iterativas
+      // Mientras (while)
+      let contador = 0;
+      // "Mientras" se ejecuta siempre que la condicion sea verdadera
+      while (contador >= 0 && contador <= 50) {
+        console.log(contador);
+        contador++;
+      }
+      console.log("Fin del ciclo mientras");
+
+      let n = 0;
+      let x = 0;
+      while (n < 3) {
+        n = n + 1;
+        console.log(`este es el valor de n ${n}`);
+        x = x + n;
+        console.log(`este es el valor de x ${x}`);
+      }
+    </script>
+  </body>
+</html>

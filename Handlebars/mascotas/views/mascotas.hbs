@@ -1,0 +1,26 @@
+<h1>MASCOTAS</h1>
+<h2>Mascotas registradas en mi Base de Datos</h2>
+<table border="solid">
+<thead>
+<tr>
+<th>Id</th>
+<th>Nombre</th>
+<th>Especie</th>
+<th>Raza</th>
+<th>Edad</th>
+<th>Propietario</th>
+</tr>
+</thead>
+<tbody>
+{{#each mascotas}}
+<tr>
+<td>{{id}}</td>
+<td>{{nombre}}</td>
+<td>{{especie}}</td>
+<td>{{raza}}</td>
+<td>{{edad}}</td>
+<td>{{propietario}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

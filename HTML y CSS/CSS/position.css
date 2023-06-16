@@ -1,0 +1,66 @@
+.caja-relativa{
+    background-color: aqua;
+    width: 150px;
+    height: 50px;
+    /* Posicionamiento relativo: Se mueve desde su punto de origen en el documento HTML*/
+    position: relative;
+    /* Para darle posicion al los elementos con position */
+    /* Se van a utilizar las siguientes propiedades: */
+    /* Top (eje y) */
+    /* Bottom (eje y) */
+    /* Left (eje x) */
+    /* Right (eje x) */
+    /* z-index (eje z)*/
+    top: 100px;
+    left: 200px;
+    }
+    .caja-absoluta{
+        background-color: blueviolet;
+        width: 150px;
+        height: 50px;
+        /* La caja absoluta pierde su posicion inicial y se mueve con respecto al elemento html */
+        position: absolute;
+        top: 500;
+        left: 400px;
+        }
+        .caja-fija{
+            background-color: tomato;
+            width: 150px;
+            height: 50px;
+            /* Esta posicion queda fija mientras se desplaza por el documento HTML y al igual que absolute se mueve con respecto a la etiqueta HTML*/
+            position: fixed;
+            bottom: 350px;
+            right: 0;
+            }
+            .caja-pegajosa{
+                background-color: greenyellow;
+                width: 150px;
+                height: 50px;
+                /* Sticky no pierde su posicion inicial, una vez despues del desplazamiento llega a los valores indicados con top, bottom, left y right pierde su posicion y se quedo pegado */
+                position: sticky;
+                top: 20px;
+                left: 0;
+                }
+                .z-index-1,.z-index-2,.z-index-3{
+                    background-color: rgb(255, 47, 175);
+                    width: 150px;
+                    height: 50px;
+                    border: 3px solid blue;
+                    position: relative;
+                    }
+                    
+                    .z-index-1{
+                    top: 20px;
+                    left: 100px;
+                    z-index: 20;
+                    }
+                    
+                    .z-index-2{
+                    z-index: 15;
+                    }
+                    
+                    .z-index-3{
+                    top: -20px;
+                    left: 100px;
+                    z-index: 20;
+                    }

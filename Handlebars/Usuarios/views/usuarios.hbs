@@ -1,0 +1,24 @@
+<h1>Usuarios</h1>
+<h2>Personas registradas en mi Base de Datos</h2>
+<table border="solid">
+<thead>
+<tr>
+<th>Cedula</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Edad</th>
+<th>Fecha de nacimiento</th>
+</tr>
+</thead>
+<tbody>
+{{#each personas}}
+<tr>
+<td>{{cedula}}</td>
+<td>{{nombre}}</td>
+<td>{{apellido}}</td>
+<td>{{edad}}</td>
+<td>{{formatearFecha fecha_nacimiento}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

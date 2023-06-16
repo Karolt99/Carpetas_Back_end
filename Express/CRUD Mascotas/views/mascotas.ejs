@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles-mascotas.css">
+<title>CRUD</title>
+</head>
+<body>
+<h1>CRUD Mascotas</h1>
+<h2>Mascotas registradas</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Especie</th>
+<th>Raza</th>
+<th>Edad</th>
+<th>Propietario</th>
+</tr>
+</thead>
+<tbody>
+<% resultados.forEach(function(fila) { %>
+<tr>
+<td><%= fila.id %></td>
+<td><%= fila.nombre %></td>
+<td><%= fila.especie %></td>
+<td><%= fila.raza %></td>
+<td><%= fila.edad %></td>
+<td><%= fila.propietario %></td>
+</tr>
+<% }); %>
+</tbody>
+</table>
+<a href="agregarMascota">Agregar Mascota</a>
+<a href="buscarMascota">Buscar Mascota</a>
+</body>
+</html>

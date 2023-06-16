@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles-agregar.css">
+<title>Agregar Mascotas</title>
+</head>
+<body>
+<h1>Agregar Mascotas</h1>
+<form action="/agregar" method="POST">
+
+<label for="id">ID:</label>
+<input type="number" id="id" name="id" required>
+<br>
+<label for="name">Nombre:</label>
+<input type="text" id="name" name="name" required>
+<br>
+<label for="especie">Especie:</label>
+<input type="text" id="especie" name="especie" required>
+<br>
+<label for="raza">Raza:</label>
+<input type="text" id="raza" name="raza" required>
+<br>
+<label for="age">Edad:</label>
+<input type="number" id="age" name="age" required>
+<br>
+<label for="propietario">Propietario:</label>
+<input type="text" id="propietario" name="propietario" required>
+<br>
+
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>

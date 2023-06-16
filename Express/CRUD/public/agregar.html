@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles-agregar.css">
+<title>Agregar Usuarios</title>
+</head>
+<body>
+<h1>Agregar Usuarios</h1>
+<form action="/agregar" method="POST">
+<label for="id">Cedula:</label>
+<input type="number" id="id" name="id" required>
+<br>
+<label for="name">Nombre:</label>
+<input type="text" id="name" name="name" required>
+<br>
+<label for="lastname">Apellido:</label>
+<input type="text" id="lastname" name="lastname" required>
+<br>
+<label for="age">Edad:</label>
+<input type="number" id="age" name="age" required>
+<br>
+<label for="birth">Fecha de Nacimiento:</label>
+<input type="date" id="birth" name="birth" required>
+<br>
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>

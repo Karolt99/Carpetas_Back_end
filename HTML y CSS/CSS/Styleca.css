@@ -1,0 +1,87 @@
+    body{
+    /* Trae un color de fondo */
+    background-color: #e7c7ff;
+    /* Background image trae una imagen de fondo */
+    background-image: url(img/paisajeRosa.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    
+    h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #afaefc;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    }
+    
+    .parrafo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 3;
+    }
+    /* No se suelen utilizar ID en el desarrollo, porque solo se usa una vez, entonces por cada ID hay que ponerlo aqui*/
+    #parrafo-unico{
+    font-size: 20px;
+    text-align: right;
+    color: #e7c7ff;
+    }
+    /*Div, permite que */
+    .contenedor-fondo{
+    background-color: #f6ff00;
+    font-size: 24px;
+    color: #ff0000;
+    }
+    
+    .parrafo-fondo{
+    background-color: #1500ff;
+     }
+
+     a{
+        font-size: 40px;
+        text-decoration: none;
+        color: #e7c7ff;
+     }
+     .titulo-mayus{
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #ffffff;
+     }
+     .caja{
+        background-color: mediumpurple;
+        border-style: solid;
+        border-color: #1100ff;
+        border-width: 5px;
+        padding-left: 30px;
+        padding-right: 35px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        /* margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 20px;
+        margin-right: 20px; */
+        margin: 100px 20px 100px 20px;
+        width: 300px;
+        height: 600px;
+        }
+        
+        .caja h2{
+        border: 5px dotted #00ffee;
+        padding: 10px 50px 30px 20px;
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        li{
+         color: aliceblue;
+         font-size: 30px;
+        }
+        .display-linea{
+         display: block;
+        }
+        .display-bloque{
+         display: inline;
+        }

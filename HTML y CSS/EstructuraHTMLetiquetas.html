@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: aqua;
+        }
+        nav{
+            background-color: blue;
+        }
+        nav a{
+
+            color: white;
+        }
+        main{
+            background-color: lightpink;
+        }
+        article{
+            background-color: aqua;
+        }
+        section{
+            background-color: bisque;
+        }
+        footer{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logoPortafolioLiliana.png">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#sobreNosotros">Sobre nosotros</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- En main se guarda la información principal del documen to HTML (pagina web) -->
+    <main>
+        <h1>Portafolio de desarrollo. Liliana Herrera</h1>
+        <img src="img/pc-Liliana.jpg" width="500px">
+        <!-- articles. secciones en donde van a ver articulos o información de nuestro sitio web -->
+        <article id="sobreNosotros">
+            <h2>Sobre nosotros</h2>
+            <p>Ingeniera de la Distrital especializada en el Desarrollo de software, paginas web, HTML, CSS, JavaScript</p>
+            <br><br><br><br><br><br><br><br><br><br>
+        </article>
+        <article id="proyectos">
+            <h2>Proyectos</h2>
+            <section>
+                <h3>Biografia de Ada</h3>
+                <p>Se hizo un sitio web sobre la biografia de Ada</p>
+                <a href="https://biografiaada.llherrerap.repl.co" target="_blank">Click aquí para ver el proyecto</a>
+            </section>
+            <section>
+                <h3>Sitio web de peliculas</h3>
+                <p>Se hizo un sitio web de recomendaciones y catalogo de peliculas</p>
+                <a href="https://sitioweb-peliculas.llherrerap.repl.co" target="_blank">Click aquí para ver el proyecto</a>
+            </section>
+        </article>
+        <article id="contacto">
+            <h2>Contactanos</h2>
+            <form>
+                <label>Nombre</label>
+                <input type="text" placeholder="Ingresa tu nombre">
+                <br>
+                <textarea placeholder="Dejanos tus comentarios" cols="30" rows="10"></textarea>
+            </form>
+        </article>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <footer>
+        Pie de pagina del sitio web
+    </footer>
+</body>
+</html>

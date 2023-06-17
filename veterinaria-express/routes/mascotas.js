@@ -32,4 +32,15 @@ router.post('/guardar-mascota', (req, res) => {
   })
 })
 
+router.get('/eliminar/:cedula', (req, res) => {
+  const cedula = req.params.cedula
+  conexion.query(`DELETE FROM mascotas WHERE cedula_duenio=${cedula}`, (error, resultado) => {
+    if(error){
+      res.status(500).send('Ocurrio un error en la consulta ' + error)
+    } else {
+      res.status(200).redirect('/mascotas')
+    }
+  })
+})
+
 module.exports = router;

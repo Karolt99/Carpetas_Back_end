@@ -7,7 +7,8 @@ const exhbs = require('express-handlebars')//esta linea
 
 var indexRouter = require('./routes/index');
 var mascotasRouter = require('./routes/mascotas');//esta linea
-
+var medicosRouter = require('./routes/medicos');//esta linea
+var citasRouter = require('./routes/citas');//esta linea
 var app = express();
 
 const hbs = exhbs.create({//esta linea
@@ -28,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/mascotas', mascotasRouter);//esta linea
+app.use("/medicos", medicosRouter );//esta linea
+app.use("/citas", citasRouter );//esta linea
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,20 +2,22 @@
 <h2>LISTADO DE CITAS</h2>
 <thead>
 <tr>
-<th>Cedula dueño</th>
-<th>Cedula medico</th>
 <th>Fecha</th>
+<th>Mascota</th>
+<th>Medico</th>
+<th>Consultorio</th>
 </tr>
 </thead>
 <tbody>
 {{#each citas}}
 <tr>
-<td>{{id_mascota}}</td>
-<td>{{id_medico}}</td>
-<td>{{fecha}}</td>
+<td>{{formatoFecha fecha}}</td>
+<td>{{nombre}}</td>
+<td>{{nombres}}</td>
+<td>{{consultorio}}</td>
 <td><a class="eliminar" href="citas/eliminar/{{id_mascota}}">Eliminar</a></td>
 </tr>
 {{/each}}
 </tbody>
 </table>
-<a href="citas/agregar">Agregar cita medica</a>
+<a href="/citas/agregar">Agregar cita medica</a>

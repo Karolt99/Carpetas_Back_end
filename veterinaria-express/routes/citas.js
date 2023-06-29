@@ -38,4 +38,15 @@ res.redirect('/citas')
 })
 })
 
+router.get('/eliminar/:id', (req, res) => {
+    const id = req.params.id;
+    conexion.query(`DELETE FROM cita_medica WHERE id=${id}`, (error, resultado) => {
+    if (error) {
+    res.status(500).send('Ocurrio un error en la consulta ' + error)
+    } else{
+    res.status(200).redirect('/citas')
+    }
+    })
+    })
+
 module.exports = router;

@@ -1,0 +1,25 @@
+<table border="solid">
+<h2>LISTADO DE PACIENTES</h2>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Edad</th>
+<th>Teléfono</th>
+<th>Especialidad</th>
+</tr>
+</thead>
+<tbody>
+{{#each pacientes}}
+<tr>
+<td>{{id}}</td>
+<td>{{nombre}}</td>
+<td>{{edad}}</td>
+<td>{{telefono}}</td>
+<td>{{especialidad}}</td>
+<td><a class="eliminar" href="pacientes/eliminar/{{id}}">Eliminar</a></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<a href="pacientes/agregar">Agregar pacientes</a>

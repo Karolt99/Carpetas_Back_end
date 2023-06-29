@@ -13,16 +13,26 @@
 </thead>
 <tbody>
 {{#each medicos}}
+<form method="post"  action="/medicos/actualizar/{{cedula}}">
 <tr>
-<td>{{cedula}}</td>
-<td>{{nombres}}</td>
-<td>{{apellidos}}</td>
-<td>{{especialidad}}</td>
-<td>{{consultorio}}</td>
-<td>{{correo}}</td>
-<td><a class="eliminar" href="medicos/eliminar/{{cedula}}">Eliminar</a></td>
+<td><input id="cedula" value='{{cedula}}' disabled></td>
+<td><input id="nombre" name="nombre" value="{{nombres}}" {{../opcion}}></td>
+<td><input id="apellido" name="apellido" value="{{apellidos}}" {{../opcion}}></td>
+<td><input id="especialidad" name="especialidad" value="{{especialidad}}" {{../opcion}}></td>
+<td><input id="consultorio" name="consultorio" value="{{consultorio}}" {{../opcion}}></td>
+<td><input id="correo" name="correo" value="{{correo}}" {{../opcion}}></td>
+<td>
+{{#if ../activo}}
+<a class="eliminar" href="medicos/eliminar/{{cedula}}">Eliminar</a>
+<a class="editar" href="/medicos/activar">Editar</a>
+{{else}}
+<input type="submit" value="Enviar">
+{{/if}}
+</td>
 </tr>
+</form>
 {{/each}}
 </tbody>
 </table>
 <a href="medicos/agregar">Agregar medicos</a>
+<a href="/">Volver</a>

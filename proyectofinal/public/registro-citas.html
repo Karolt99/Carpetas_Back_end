@@ -10,26 +10,17 @@
 
 <body>
 <header>
-<h1>Hospital Back End</h1>
+<h1>HOSPITAL BACKEND</h1>
 </header>
 <main>
-<form action="./guardar-paciente" method="post">
-<h2>REGISTRO DE PACIENTES</h2>
+<form action="./guardar-cita" method="post">
+<h2>CITA MEDICA</h2>
 
-<label for="id">Numero ID:<span> *</span></label>
-<input type="number" id="id" name="id" required><br>
+<label for="cedula">Número de Cédula:<span> *</span></label>
+<input type="text" id="cedula" name="cedula" required><br>
 
-<label for="nombre">Nombre:<span> *</span></label>
-<input type="text" id="nombre" name="nombre" required><br>
-
-<label for="apellido">Apellido:<span> *</span></label>
-<input type="text" id="apellido" name="apellido" required><br>
-
-<label for="edad">Edad:<span> *</span></label>
-<input type="number" id="edad" name="edad" required><br>
-
-<label for="telefono">Telefono:<span> *</span></label>
-<input type="tel" id="telefono" name="telefono" required><br>
+<label for="fecha">Fecha:<span> *</span></label>
+<input type="date" id="fecha" name="fecha" required><br>
 
 <label for="especialidad">Especialidad requerida:<span> *</span></label>
 <select id="especialidad" name="especialidad" required>
@@ -45,8 +36,6 @@
 </select>
 
 <input type="submit" value="Enviar">
-<a href="/pacientes">Volver</a>
-
 </form>
 </main>
 </body>

@@ -12,16 +12,29 @@
 </thead>
 <tbody>
 {{#each pacientes}}
+
+<form method="post" action="/pacientes/actualizar/{{id}}">
 <tr>
-<td>{{id}}</td>
-<td>{{nombre}}</td>
-<td>{{apellido}}</td>
-<td>{{edad}}</td>
-<td>{{telefono}}</td>
-<td>{{especialidad}}</td>
-<td><a class="eliminar" href="pacientes/eliminar/{{id}}">Eliminar</a></td>
+<td><input id="id" value="{{id}}" disabled></td>
+<td><input id="nombre" name="nombre" value="{{nombre}}" {{../opcion}}></td>
+<td><input id="apellido" name="apellido" value="{{apellido}}" {{../opcion}}></td>
+<td><input id="edad" name="edad" value="{{edad}}" {{../opcion}}></td>
+<td><input id="telefono" name="telefono" value="{{telefono}}" {{../opcion}}></td>
+<td><input id="especialidad" value="{{especialidad}}" disabled></td>
+<td>
+{{#if ../activo}}
+<a class="eliminar" href="pacientes/eliminar/{{id}}">Eliminar</a>
+<a class="editar" href="/pacientes/activar">Editar</a>
+{{else}}
+<input type="submit" value="Enviar">
+{{/if}}
+</td>
 </tr>
+</form>
+
 {{/each}}
 </tbody>
 </table>
 <a href="pacientes/agregar">Agregar pacientes</a>
+<a href="/">Volver</a>
+

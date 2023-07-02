@@ -8,7 +8,11 @@ const exhbs = require('express-handlebars')//esta linea
 const moment = require('moment')//esta linea
 
 var indexRouter = require('./routes/index');
-var pacientesRouter = require('./routes/pacientes');
+var pacientesRouter = require('./routes/pacientes');//esta linea
+var medicosRouter = require('./routes/medicos');//esta linea
+var citasRouter = require('./routes/citas');//esta linea
+
+
 
 var app = express();
 
@@ -34,6 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/pacientes', pacientesRouter);//esta linea
+app.use('/medicos', medicosRouter);//esta linea
+app.use('/citas', citasRouter);//esta linea
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

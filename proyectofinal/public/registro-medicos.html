@@ -13,23 +13,17 @@
 <h1>Hospital Back End</h1>
 </header>
 <main>
-<form action="./guardar-paciente" method="post">
-<h2>REGISTRO DE PACIENTES</h2>
+<form action="./guardar-medicos" method="post">
+<h2>REGISTRO DE MEDICOS</h2>
 
 <label for="id">Numero ID:<span> *</span></label>
 <input type="number" id="id" name="id" required><br>
 
-<label for="nombre">Nombre:<span> *</span></label>
-<input type="text" id="nombre" name="nombre" required><br>
+<label for="nombres">Nombre:<span> *</span></label>
+<input type="text" id="nombres" name="nombres" required><br>
 
-<label for="apellido">Apellido:<span> *</span></label>
-<input type="text" id="apellido" name="apellido" required><br>
-
-<label for="edad">Edad:<span> *</span></label>
-<input type="number" id="edad" name="edad" required><br>
-
-<label for="telefono">Telefono:<span> *</span></label>
-<input type="tel" id="telefono" name="telefono" required><br>
+<label for="apellidos">Apellido:<span> *</span></label>
+<input type="text" id="apellidos" name="apellidos" required><br>
 
 <label for="especialidad">Especialidad requerida:<span> *</span></label>
 <select id="especialidad" name="especialidad" required>
@@ -44,8 +38,14 @@
 <option value="Radiologia">Radiologia</option>
 </select>
 
+<label for="consultorio">Consultorio:<span> *</span></label>
+<input type="number" id="consultorio" name="consultorio" required><br>
+
+<label for="correo">Correo Electronico:<span> *</span></label>
+<input type="email" id="correo" name="correo" required><br>
+
 <input type="submit" value="Enviar">
-<a href="/pacientes">Volver</a>
+<a href="/medicos">Volver</a>
 
 </form>
 </main>

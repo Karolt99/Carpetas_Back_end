@@ -1,0 +1,40 @@
+<table border="solid">
+<h2>LISTADO DE MEDICOS</h2>
+<thead>
+<tr>
+<th>id</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Especialidad</th>
+<th>Consultorio</th>
+<th>Correo</th>
+</tr>
+</thead>
+<tbody>
+{{#each medicos}}
+
+<form method="post" action="/medicos/actualizar/{{id}}">
+<tr>
+<td><input id="id" value="{{id}}" disabled></td>
+<td><input id="nombres" name="nombres" value="{{nombres}}" {{../opcion}}></td>
+<td><input id="apellidos" name="apellidos" value="{{apellidos}}" {{../opcion}}></td>
+<td><input id="especialidad" name="especialidad" value="{{especialidad}}" disabled></td>
+<td><input id="consultorio" name="consultorio" value="{{consultorio}}" {{../opcion}}></td>
+<td><input id="correo" name="correo" value="{{correo}}" {{../opcion}}></td>
+
+<td>
+{{#if ../activo}}
+<a class="eliminar" href="medicos/eliminar/{{id}}">Eliminar</a>
+<a class="editar" href="/medicos/activar">Editar</a>
+{{else}}
+<input type="submit" value="Enviar">
+{{/if}}
+</td>
+</tr>
+</form>
+
+{{/each}}
+</tbody>
+</table>
+<a href="medicos/agregar">Agregar Medicos</a>
+<a href="/">Volver</a>

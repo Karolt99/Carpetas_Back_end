@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     if(error){
       res.status(500).send('Ocurrio un error' + error)
     } else {
-      res.status(200).render('pacientes.hbs', {pacientes,})//desde opcion se cambia el codigo
+      res.status(200).render('pacientes.hbs', {pacientes, opcion: 'disabled', activo: true})//desde opcion se cambia el codigo
     }
   })
 });
@@ -34,7 +34,7 @@ router.post('/guardar-paciente', (req, res) => {
       res.status(200).redirect('/pacientes')
     }
   })
-})
+});
 
 //Eliminando pacientes
 
@@ -47,5 +47,37 @@ router.get('/eliminar/:id', (req, res) => {
       res.status(200).redirect('/pacientes')
     }
   })
+});
+
+
+//Actualizar pacientes
+
+router.get('/activar', function(req, res, next) {
+  conexion.query('SELECT * FROM pacientes', (error, pacientes) => {
+    if(error){
+      res.status(500).send('Ocurrio un error' + error)
+    } else {
+      res.status(200).render('pacientes.hbs', {pacientes, opcion: ''})
+    }
+  })
+});
+
+router.post('/actualizar/:id', (req, res) => {
+  const id = req.params.id
+  const nombre = req.body.nombre
+  const apellido = req.body.apellido
+  const edad = req.body.edad
+  const telefono = req.body.telefono
+  const especialidad = req.body.especialidad
+
+
+  conexion.query(`UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', edad=${edad}, telefono=${telefono}, especialidad='${especialidad}' WHERE id=${id}`, (error, resultado) => {
+    if (error) {
+      res.status(500).send('Ocurrio un error en la ejecución ' + error)
+    } else {
+      res.status(200).redirect('/pacientes')
+    }
+  })
 })
+
 module.exports = router;

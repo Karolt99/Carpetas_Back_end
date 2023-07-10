@@ -25,9 +25,8 @@ router.post('/guardar-paciente', (req, res) => {
   const apellido = req.body.apellido
   const edad = req.body.edad
   const telefono = req.body.telefono
-  const especialidad = req.body.especialidad
 
-  conexion.query(`INSERT INTO pacientes (id, nombre, apellido, edad, telefono, especialidad) VALUES (${id}, '${nombre}', '${apellido}', ${edad}, '${telefono}', '${especialidad}')`, (error, resultado) => {
+  conexion.query(`INSERT INTO pacientes (id, nombre, apellido, edad, telefono) VALUES (${id},'${nombre}', '${apellido}', ${edad}, '${telefono}')`, (error, resultado) => {
     if (error) {
       res.status(500).send('Ocurrio un error en la consulta'+ error)
     } else {
@@ -68,10 +67,8 @@ router.post('/actualizar/:id', (req, res) => {
   const apellido = req.body.apellido
   const edad = req.body.edad
   const telefono = req.body.telefono
-  const especialidad = req.body.especialidad
 
-
-  conexion.query(`UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', edad=${edad}, telefono=${telefono}, especialidad='${especialidad}' WHERE id=${id}`, (error, resultado) => {
+  conexion.query(`UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', edad=${edad}, telefono=${telefono} WHERE id=${id}`, (error, resultado) => {
     if (error) {
       res.status(500).send('Ocurrio un error en la ejecución ' + error)
     } else {

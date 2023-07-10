@@ -69,7 +69,7 @@ router.post('/actualizar/:id', (req, res) => {
   const especialidad = req.body.especialidad
   const consultorio = req.body.consultorio
   const correo = req.body.correo
-  
+  console.log(especialidad)
 
   conexion.query(`UPDATE medicos SET nombres='${nombres}', apellidos='${apellidos}',especialidad='${especialidad}', consultorio=${consultorio}, correo='${correo}' WHERE id=${id}`, (error, resultado) => {
     if (error) {

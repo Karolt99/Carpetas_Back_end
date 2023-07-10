@@ -1,3 +1,4 @@
+<body background="https://fondosmil.com/fondo/46044.jpg"></body>
 <table border="solid">
 <h2>LISTADO DE PACIENTES</h2>
 <thead>
@@ -7,7 +8,6 @@
 <th>Apellido</th>
 <th>Edad</th>
 <th>Teléfono</th>
-<th>Especialidad</th>
 </tr>
 </thead>
 <tbody>
@@ -20,7 +20,6 @@
 <td><input id="apellido" name="apellido" value="{{apellido}}" {{../opcion}}></td>
 <td><input id="edad" name="edad" value="{{edad}}" {{../opcion}}></td>
 <td><input id="telefono" name="telefono" value="{{telefono}}" {{../opcion}}></td>
-<td><input id="especialidad" value="{{especialidad}}" disabled></td>
 <td>
 {{#if ../activo}}
 <a class="eliminar" href="pacientes/eliminar/{{id}}">Eliminar</a>

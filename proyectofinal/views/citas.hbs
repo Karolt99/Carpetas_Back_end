@@ -1,11 +1,14 @@
+<body background="https://fondosmil.com/fondo/46044.jpg"></body>
 <table border="solid">
-<h2>LISTADO DE CITAS</h2>
+<h2>LISTADO DE CITAS MEDICAS</h2>
 <thead>
 <tr>
 <th>Fecha</th>
 <th>Paciente</th>
+<th>Especialidad</th>
 <th>Medico</th>
 <th>Consultorio</th>
+<th>Correo Medico</th>
 <th>Opciones</th>
 </tr>
 </thead>
@@ -14,11 +17,15 @@
 <tr>
 <td>{{formatoFecha fecha}}</td>
 <td>{{nombre}}</td>
+<td>{{especialidad}}</td>
 <td>{{nombres}}</td>
 <td>{{consultorio}}</td>
+<td>{{correo}}</td>
+
 <td><a class="eliminar" href="citas/eliminar/{{id}}">Cancelar</a></td>
 </tr>
 {{/each}}
 </tbody>
 </table>
 <a href="/citas/agregar">Agregar cita medica</a>
+<a href="/">Volver</a>
